@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="org.panda.provider.user.dao.NPConfigDao">
+	<!--id应该是接口中的方法，结果类型如没有配置别名则应该使用全名称 -->
+	<select id="getNPConfigInfoByConfigCode" resultType="npConfigInfo">
+		<![CDATA[
+		select id id,config_code configCode,config_value configValue,config_type configType,remark remark,insert_time insertTime,
+		update_time updateTime from t_np_config where config_code=#{configCode}
+		]]>
+	</select>
+
+
+    <select id="getAllNPConfigInfos" resultType="npConfigInfo">
+		<![CDATA[
+		select id id,config_code configCode,config_value configValue,config_type configType,remark remark,insert_time insertTime,
+		update_time updateTime from t_np_config
+		]]>
+	</select>
+</mapper>
