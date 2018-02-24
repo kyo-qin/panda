@@ -8,8 +8,8 @@
 		<artifactId>panda</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>panda-customer-user</artifactId>
-	<name>panda-customer-user</name>
+	<artifactId>panda-customer-user-ribbon</artifactId>
+	<name>panda-customer-user-ribbon</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

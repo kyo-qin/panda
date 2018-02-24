@@ -3,6 +3,7 @@ package org.panda.provider.user;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 //import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.core.annotation.Order;
 
@@ -11,7 +12,7 @@ import org.springframework.core.annotation.Order;
  *
  */
 @SpringBootApplication
-//@EnableEurekaClient
+@EnableEurekaClient
 public class App {
     
     public static void main(String[] args) {

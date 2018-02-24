@@ -1,27 +1,30 @@
-package org.panda.customer.user;
+package org.panda.customer.user.ribbon;
 
+import org.panda.customer.user.ribbon.config.UserClientRobbinConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-//import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * 使用ribbon做客户端负载均衡，调用user提供的服务
+ * Hello world!
  *
  */
 @SpringBootApplication
 @EnableEurekaClient
-// @RibbonClient(name = "microservice-provider-user", configuration =
-// TestConfiguration.class)
-// @ComponentScan(excludeFilters = { @ComponentScan.Filter(type =
-// FilterType.ANNOTATION, value = ExcludeFromComponentScan.class) })
+// 不扫描ribbon的配置类
+@ComponentScan(basePackages = { "org.panda.customer.user.ribbon" }, excludeFilters = {
+        @ComponentScan.Filter(type = FilterType.ANNOTATION, pattern = "org.panda.customer.user.ribbon.config.*") })
+@RibbonClient(name = "microservice-provider-user", configuration = UserClientRobbinConfiguration.class)
 public class App {
 
     @Bean
+    @LoadBalanced
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
@@ -29,5 +32,4 @@ public class App {
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
     }
-
 }

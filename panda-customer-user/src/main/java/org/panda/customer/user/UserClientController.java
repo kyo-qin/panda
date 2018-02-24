@@ -6,14 +6,21 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.netflix.discovery.EurekaClient;
+
 @RestController
 public class UserClientController {
 
     @Autowired
     private RestTemplate restTemplate;
+    
+    @Autowired
+    private EurekaClient discoveryClient;
 
     @GetMapping("/movie/{id}")
     public NPConfigInfo findById(@PathVariable Long id) {
         return this.restTemplate.getForObject("http://localhost:7900/simple/" + id, NPConfigInfo.class);
     }
+    
+    
 }

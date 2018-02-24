@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-consumer-user
+    name: microservice-consumer-user-ribbon
 server:
   port: 8010
 eureka:

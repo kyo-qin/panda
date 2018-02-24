@@ -12,6 +12,9 @@ spring:
 #    data: classpath:data.sql
   application:
     name: microservice-provider-user
+security:
+  basic:
+    enabled: false
 logging:
   level:
     root: INFO
@@ -19,16 +22,17 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
     org.ota: DEBUG
-#eureka:
-#  client:
-##    healthcheck:
-##      enabled: true
-#    serviceUrl:
-#      defaultZone: http://user:password123@localhost:8761/eureka
-#  instance:
-#    prefer-ip-address: true
+eureka:
+  client:
+#    healthcheck:
+#      enabled: true
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
 #    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    instance-id: ${spring.application.name}:${server.port}
 #    metadata-map:
 #      zone: ABC      # eureka可以理解的元数据
 #      lilizhou: BBC  # 不会影响客户端行为
-#    lease-renewal-interval-in-seconds: 5
+    lease-renewal-interval-in-seconds: 5
