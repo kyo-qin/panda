@@ -15,6 +15,7 @@
 		<module>panda-provider-user</module>
 		<module>panda-customer-user</module>
     <module>panda-customer-user-ribbon</module>
+    <module>panda-customer-user-ribbon-without-eureka</module>
   </modules>
 
 	<parent>

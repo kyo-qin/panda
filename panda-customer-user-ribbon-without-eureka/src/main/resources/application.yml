@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: microservice-consumer-user-ribbon-without-eureka
+server:
+  port: 8010
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://user:password123@localhost:8761/eureka
+#  instance:
+#    prefer-ip-address: true
+#通过配置的方式来定义ribbon，配置优先于自定义代码，优先于默认值
+ribbon:
+  NFLoadBalancerPingInterval: 3
+  NFLoadBalancerMaxTotalPingTime: 30
+microservice-provider-user:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8080
+    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
