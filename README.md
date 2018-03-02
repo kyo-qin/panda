@@ -1,12 +1,19 @@
 # SpringCloud基础入门例子
 
 ## eureka
+* project `panda-discovery-eureka`
+* project `panda-customer-user`
+* project `panda-provider-user`
 spring cloud的服务注册与发现组件。
 ![](https://github.com/kyo-qin/panda/blob/master/panda-resources/images/eureka01.jpg)
+
 ## ribbon
+* project `panda-customer-user-ribbon`
+* project `panda-customer-user-ribbon-without-eureka`
 客户端负载均衡工具，支持单独用，也可以和`eureka`结合起来用。
 
 ## feign
+* project `panda-customer-user-feign`
 声明式的rest客户端组件。
 使用feign的时候注意：
 1. 如果使用自定义配置类覆盖了原有配置，那么建议使用feign的注解，否则可能导致一些莫名其妙的问题，比如提示你方法要指定get post啦，或者提示你的参数太多啦（too many body parameters）。feign的注解比如下面这个：
