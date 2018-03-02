@@ -2,7 +2,7 @@
 
 ## eureka
 spring cloud的服务注册与发现组件。
-
+![](https://github.com/kyo-qin/panda/blob/master/panda-resources/images/eureka01.jpg)
 ## ribbon
 客户端负载均衡工具，支持单独用，也可以和`eureka`结合起来用。
 
