@@ -1,12 +1,12 @@
-#SpringCloud基础入门例子
+# SpringCloud基础入门例子
 
-##eureka
+## eureka
 
 
-##ribbon
+## ribbon
 客户端负载均衡工具，支持单独用，也可以和`eureka`结合起来用。
 
-##feign
+## feign
 声明式的rest客户端组件。
 使用feign的时候注意：
 1. 如果使用自定义配置类覆盖了原有配置，那么建议使用feign的注解，否则可能导致一些莫名其妙的问题，比如提示你方法要指定get post啦，或者提示你的参数太多啦（too many body parameters）。feign的注解比如下面这个：
