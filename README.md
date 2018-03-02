@@ -24,9 +24,8 @@
     public String getPayResult(@Param("app_id") final String appId,
             @Param("game_code") final String gameCode);<br>
 ```
-2. 记得querystring要写在注解中，不然无法传递参数。<br>
->比如
+>>2. 记得querystring要写在注解中，不然无法传递参数。比如：<br>
 ```java
 @RequestLine("GET /get_pay_result?app_id={app_id}&game_code={game_code}")
 ```
->中的app_id和game_code。<br>
+>>中的app_id和game_code。<br>
