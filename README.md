@@ -1,7 +1,7 @@
 # SpringCloud基础入门例子
 
 ## eureka
-
+spring cloud的服务注册与发现组件。
 
 ## ribbon
 客户端负载均衡工具，支持单独用，也可以和`eureka`结合起来用。
