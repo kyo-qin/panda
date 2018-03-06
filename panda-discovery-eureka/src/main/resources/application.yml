@@ -7,6 +7,9 @@ security:
 server:
   port: 8761
 eureka:
+#eureka 两个配置
+  datacenter: cloud
+  environment: product
   client:
     register-with-eureka: false
     fetch-registry: false

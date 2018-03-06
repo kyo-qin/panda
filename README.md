@@ -1,18 +1,20 @@
 # SpringCloud基础入门例子
 
-## eureka
+## Eureka
 * project `panda-discovery-eureka`
 * project `panda-customer-user`
 * project `panda-provider-user` <br>
 >spring cloud的服务注册与发现组件。<br>
 ![](https://github.com/kyo-qin/panda/blob/master/panda-resources/images/eureka01.jpg)
 
-## ribbon
+## Ribbon
 * project `panda-customer-user-ribbon`
 * project `panda-customer-user-ribbon-without-eureka` <br>
 >客户端负载均衡工具，支持单独用，也可以和`eureka`结合起来用。
+https://github.com/Netflix/ribbon/wiki/Working-with-load-balancers
+[Ribbon Git](https://github.com/Netflix/ribbon/wiki/Working-with-load-balancers)
 
-## feign
+## Feign
 * project `panda-customer-user-feign` <br>
 >声明式的rest客户端组件。<br>
 >使用feign的时候注意：<br>
@@ -29,3 +31,11 @@
 @RequestLine("GET /get_pay_result?app_id={app_id}&game_code={game_code}")
 ```
 >>中的app_id和game_code。<br>
+>>3. feign不支持复杂对象做参数。
+[Feign Git](https://github.com/OpenFeign/feign)
+
+## Hystrix
+>断路器。<br>
+* 监控失败率，例如失败率达到10%开启断路模式；
+* 半开的时候做分流；
+* 监控并恢复；
