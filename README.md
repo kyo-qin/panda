@@ -11,8 +11,7 @@
 * project `panda-customer-user-ribbon`
 * project `panda-customer-user-ribbon-without-eureka` <br>
 >客户端负载均衡工具，支持单独用，也可以和`eureka`结合起来用。
-https://github.com/Netflix/ribbon/wiki/Working-with-load-balancers
-[Ribbon Git](https://github.com/Netflix/ribbon/wiki/Working-with-load-balancers)
+>[Ribbon Git](https://github.com/Netflix/ribbon/wiki/Working-with-load-balancers)
 
 ## Feign
 * project `panda-customer-user-feign` <br>
@@ -32,10 +31,13 @@ https://github.com/Netflix/ribbon/wiki/Working-with-load-balancers
 ```
 >>中的app_id和game_code。<br>
 >>3. feign不支持复杂对象做参数。
-[Feign Git](https://github.com/OpenFeign/feign)
+>[Feign Git](https://github.com/OpenFeign/feign)
 
 ## Hystrix
 >断路器。<br>
 * 监控失败率，例如失败率达到10%开启断路模式；
 * 半开的时候做分流；
 * 监控并恢复；
+* 断路器状态，比如打开，关闭，半开；
+
+>[Hystrix Git](https://github.com/Netflix/Hystrix)
