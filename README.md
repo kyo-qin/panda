@@ -74,5 +74,5 @@ public class App {
 
     }
 ```
-
+>[Hyetrix Command Properties]
 >[Hystrix Git](https://github.com/Netflix/Hystrix)
