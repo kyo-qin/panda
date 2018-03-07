@@ -38,9 +38,9 @@ feign的注解比如下面这个：<br>
 * 监控失败率，例如失败率达到10%开启断路模式；
 * 半开的时候做分流；
 * 监控并恢复；
-* 断路器状态，比如打开，关闭，半开；
-spring-cloud-starter-hystrix为核心jar
-spring-cloud-starter-hystrix-dashboard为监控jar
+* 断路器状态，比如打开，关闭，半开；<br>
+spring-cloud-starter-hystrix为核心jar<br>
+spring-cloud-starter-hystrix-dashboard为监控jar<br>
 ***应用启动时需要加入Hystrix注解***
 ```java
 @SpringBootApplication
