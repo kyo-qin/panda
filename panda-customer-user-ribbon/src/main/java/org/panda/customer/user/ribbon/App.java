@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 // 不扫描ribbon的配置类
 @ComponentScan(basePackages = { "org.panda.customer.user.ribbon" }, excludeFilters = {
-        @ComponentScan.Filter(type = FilterType.ANNOTATION, pattern = "org.panda.customer.user.ribbon.config.*") })
+        @ComponentScan.Filter(type = FilterType.REGEX, pattern = "org.panda.customer.user.ribbon.config.*") })
 @RibbonClient(name = "microservice-provider-user", configuration = UserClientRobbinConfiguration.class)
 public class App {
 

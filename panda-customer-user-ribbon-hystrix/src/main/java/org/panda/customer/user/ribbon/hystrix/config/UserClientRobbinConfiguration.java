@@ -16,7 +16,6 @@ import com.netflix.loadbalancer.RandomRule;
  * @Author ota
  * @Create Date 2018年2月23日
  */
-@Configuration
 public class UserClientRobbinConfiguration {
 
     @Autowired

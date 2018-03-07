@@ -1,6 +1,6 @@
 spring:
   application:
-    name: microservice-consumer-user-ribbon
+    name: microservice-consumer-user-ribbon-hystrix
 server:
   port: 8010
 eureka:
@@ -9,8 +9,11 @@ eureka:
       defaultZone: http://user:password123@localhost:8761/eureka
   instance:
     prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
 #通过配置的方式来定义ribbon，配置优先于自定义代码，优先于默认值
 microservice-provider-user:
   ribbon:
     #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+hystrix.command.HystrixCommandKey.execution.isolation.thread.timeoutInMilliseconds: 10000
