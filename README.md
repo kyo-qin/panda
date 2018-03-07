@@ -74,5 +74,5 @@ public class App {
 
     }
 ```
->[Hyetrix Command Properties]
+>[Hyetrix Command Properties](https://github.com/kyo-qin/panda/blob/master/panda-customer-user-ribbon-hystrix/README.md)<br>
 >[Hystrix Git](https://github.com/Netflix/Hystrix)
