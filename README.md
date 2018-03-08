@@ -75,7 +75,7 @@ public class App {
 
     }
 ```
->[Hyetrix Command Properties](https://github.com/kyo-qin/panda/blob/master/panda-customer-user-ribbon-hystrix/README.md)<br>
+>[Hyetrix Command Properties](https://github.com/Netflix/Hystrix/wiki/Configuration#circuitBreaker.errorThresholdPercentage)<br>
 >[Hystrix Git](https://github.com/Netflix/Hystrix)<br>
 
 ***Hystrix life cycle***
