@@ -80,3 +80,13 @@ public class App {
 
 ***Hystrix life cycle***
 ![](https://github.com/kyo-qin/panda/blob/master/panda-resources/images/hystrix-life-cycle.png)
+
+***Hystrix配置注意***
+```java
+    @Bean
+    public Contract feignContract() {
+        return new SpringMvcContract();
+        //return new feign.Contract.Default();
+    }
+```
+>如果使用feign.Contract.Default()作为当前contract，则不支持使用@GetMapping，@RequestMapping这种SpringMVC使用的url请求注解，只能使用feign自带的注解@RequestLine。<br>

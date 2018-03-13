@@ -13,6 +13,7 @@ public class NPConfigInfoFeignConfiguration {
     @Bean
     public Contract feignContract() {
         return new SpringMvcContract();
+        //return new feign.Contract.Default();
     }
 
     @Bean
