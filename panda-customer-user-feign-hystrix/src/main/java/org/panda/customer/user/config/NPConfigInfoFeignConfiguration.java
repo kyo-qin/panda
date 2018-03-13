@@ -12,12 +12,12 @@ public class NPConfigInfoFeignConfiguration {
 
     @Bean
     public Contract feignContract() {
-        return new SpringMvcContract();//用feign的defaultcontract就只支持feign的注解
+        return new SpringMvcContract();
     }
 
-//    @Bean
-//    public BasicAuthRequestInterceptor basicAuthRequestInterceptor() {
-//        return new BasicAuthRequestInterceptor("user", "password123");
-//    }
+    @Bean
+    public BasicAuthRequestInterceptor basicAuthRequestInterceptor() {
+        return new BasicAuthRequestInterceptor("user", "password123");
+    }
 
 }
