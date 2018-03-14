@@ -17,11 +17,12 @@ import feign.RequestLine;
  * @Author ota
  * @Create Date 2018年3月13日
  */
-@FeignClient(name = "microservice-provider-user", configuration = NPConfigInfoFeignConfiguration.class, fallback = NPConfigInfoFeignClientFallback.class)
+// fallback = NPConfigInfoFeignClientFallback.class fallback和fallbackFactory选一个
+@FeignClient(name = "microservice-provider-user", configuration = NPConfigInfoFeignConfiguration.class, fallbackFactory = NPConfigInfoFeignClientFallbackFactory.class)
 public interface NPConfigInfoFeignClient {
 
-    @RequestLine("GET /simple/{id}")
-    //@RequestMapping(value = "/simple/{id}", method = RequestMethod.GET)
-    public NPConfigInfo findById(@Param("id") Integer id);
+    // @RequestLine("GET /simple/{id}")
+    @RequestMapping(value = "/simple/{id}", method = RequestMethod.GET)
+    public NPConfigInfo findById(@PathVariable("id") Integer id);
 
 }

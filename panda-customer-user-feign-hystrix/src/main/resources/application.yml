@@ -14,6 +14,7 @@ logging:
   level:
     org.panda.customer.user.feign.TestFeignClient: DEBUG
 hystrix.command.default.execuiton.ioslation.thread.timeoutInMilliseconds: 5000
+#新版本默认给关了
 feign:
   hystrix:
     enabled: true
