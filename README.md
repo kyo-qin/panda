@@ -98,6 +98,7 @@ turbine.stream路径：<br>
 turbine.dashboard路径：<br>
 >http://localhost:8012/hystrix
 >将turbine.stream路径输入turbine的dashboard实现stream解读。
+
 ![](https://github.com/kyo-qin/panda/blob/master/panda-resources/images/turbine-dashboard.jpg)
 ***turbine监控多个应用的配置***
 ```java
