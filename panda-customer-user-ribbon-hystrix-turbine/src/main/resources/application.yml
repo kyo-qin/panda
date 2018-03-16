@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: microservice-consumer-user-ribbon-hystrix-turbine
+server:
+  port: 8012
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+#通过配置的方式来定义ribbon，配置优先于自定义代码，优先于默认值
+microservice-provider-user:
+  ribbon:
+    #NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
+hystrix.command.HystrixCommandKey.execution.isolation.thread.timeoutInMilliseconds: 10000
+#turbine:
+#  aggregator:
+#    cluster-config: MICROSERVICE-CONSUMER-USER-RIBBON-HYSTRIX
+#  app-config: microservice-consumer-user-ribbon-hystrix
+
+#配置要读取的app的contextpath
+#turbine.instanceUrlSuffix.MICROSERVICE-CONSUMER-USER-RIBBON-HYSTRIX: /ribbon/hystrix.stream
+
+turbine:
+  aggregator:
+    cluster-config: default
+  app-config: microservice-consumer-user-ribbon-hystrix,microservice-consumer-user-feign-hystrix
+  clusterNameExpression: "'default'"

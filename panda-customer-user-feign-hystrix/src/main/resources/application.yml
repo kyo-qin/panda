@@ -2,7 +2,7 @@ spring:
   application:
     name: microservice-consumer-user-feign-hystrix
 server:
-  port: 8011
+  port: 8013
 eureka:
   client:
     serviceUrl:

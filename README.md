@@ -83,3 +83,28 @@ public class App {
     }
 ```
 >如果使用feign.Contract.Default()作为当前contract，则不支持使用@GetMapping，@RequestMapping这种SpringMVC使用的url请求注解，只能使用feign自带的注解@RequestLine。<br>
+
+## Tubine
+用于查看hystrix集群状态。<br>
+***turbine的配置***
+```yaml
+turbine:
+  aggregator:
+    cluster-config: MICROSERVICE-CONSUMER-USER-RIBBON-HYSTRIX #集群名称
+  app-config: microservice-consumer-user-ribbon-hystrix #app配置
+```
+turbine.stream路径：<br>
+>http://localhost:8012/turbine.stream?cluster=MICROSERVICE-CONSUMER-USER-RIBBON-HYSTRIX
+turbine.dashboard路径：<br>
+>http://localhost:8012/hystrix
+>将turbine.stream路径输入turbine的dashboard实现stream解读。
+![](https://github.com/kyo-qin/panda/blob/master/panda-resources/images/turbine-dashboard.jpg)
+***turbine监控多个应用的配置***
+```java
+turbine:
+  aggregator:
+    cluster-config: default
+  app-config: microservice-consumer-user-ribbon-hystrix,microservice-consumer-user-feign-hystrix
+  clusterNameExpression: "'default'"
+```
+![](https://github.com/kyo-qin/panda/blob/master/panda-resources/images/turbine-dashboard-n.jpg)
