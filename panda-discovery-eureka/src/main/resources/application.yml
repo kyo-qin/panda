@@ -1,3 +1,5 @@
+#management:
+#  port: 8762
 security:
   basic:
     enabled: true
@@ -15,3 +17,6 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://user:password123@localhost:8761/eureka
+#  instance:
+#    metadata-map:
+#      management.port: 8762

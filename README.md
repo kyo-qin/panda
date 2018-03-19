@@ -109,3 +109,6 @@ turbine:
   clusterNameExpression: "'default'"
 ```
 ![](https://github.com/kyo-qin/panda/blob/master/panda-resources/images/turbine-dashboard-n.jpg)
+
+## Zuul
+基于JVM的路由器（反向代理网关）和服务端负载均衡器。<br>
