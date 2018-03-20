@@ -112,3 +112,22 @@ turbine:
 
 ## Zuul
 基于JVM的路由器（反向代理网关）和服务端负载均衡器。<br>
+启动类中的注解：<br>
+```java
+@SpringBootApplication
+@EnableZuulProxy
+@EnableDiscoveryClient
+public class App {
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+}
+```
+配置示例：<br>
+```java
+zuul:
+  routes:
+    abc:
+      path: /user/**
+      serviceId: microservice-provider-user
+```
