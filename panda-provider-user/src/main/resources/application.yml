@@ -12,6 +12,10 @@ spring:
 #    data: classpath:data.sql
   application:
     name: microservice-provider-user
+  http:
+    multipart:
+      max-file-size: 2000Mb #默认1M
+      max-request-size: 2500Mb #默认10M
 security:
   basic:
     enabled: false

@@ -1,6 +1,7 @@
 spring:
   application:
     name: microservice-gateway-zuul
+    
 server:
   port: 8040
 eureka:
@@ -10,10 +11,13 @@ eureka:
   instance:
     prefer-ip-address: true
 zuul:
+#  prefix: /simple  #所有URL之前加上/api这个前缀
+#  strip-prefix: false #把prefix从代理的url里面拿掉了
   routes:
 #服务映射
 #    microservice-provider-user: /user/**
     abc:
       path: /user/**
+#      strip-prefix: false
       serviceId: microservice-provider-user
 #      url: http://127.0.0.1:7900
