@@ -10,6 +10,13 @@ eureka:
       defaultZone: http://user:password123@localhost:8761/eureka
   instance:
     prefer-ip-address: true
+
+ribbon:
+  ConnectionTimeout: 6000
+  ReadTimeout: 300000
+
+hystrix.command.default.execution.isolation.thread.timeoutInMillisecond: 60000
+
 zuul:
 #  prefix: /simple  #所有URL之前加上/api这个前缀
 #  strip-prefix: false #把prefix从代理的url里面拿掉了

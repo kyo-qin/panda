@@ -131,3 +131,4 @@ zuul:
       path: /user/**
       serviceId: microservice-provider-user
 ```
+***zuul集成了hystrix，具有断路器功能***
