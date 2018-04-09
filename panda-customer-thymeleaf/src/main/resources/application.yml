@@ -1,0 +1,38 @@
+server:
+  port: 7910
+  session:
+    timeout: 10
+  tomcat:
+    uri-encoding: utf-8
+spring:
+  application:
+    name: microservice-customer-thymeleaf
+  http:
+    multipart:
+      max-file-size: 2000Mb #默认1M
+      max-request-size: 2500Mb #默认10M
+  thymeleaf:
+    prefix: classpath:/views/
+    suffix: .html
+    mode: HTML5
+    encoding: utf-8
+    content-type: text/html
+    cache: false
+security:
+  basic:
+    enabled: false
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+    org.ota: DEBUG
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://user:password123@localhost:8761/eureka
+#  instance:
+#    prefer-ip-address: true
+#    instance-id: ${spring.application.name}:${server.port}
+#    lease-renewal-interval-in-seconds: 5

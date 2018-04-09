@@ -22,6 +22,7 @@
 		<module>panda-customer-user-ribbon-hystrix-turbine</module>
 		<module>panda-gateway-zuul</module>
     <module>panda-sidecar</module>
+    <module>panda-customer-thymeleaf</module>
   </modules>
 
 	<parent>
