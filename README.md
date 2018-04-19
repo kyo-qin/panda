@@ -132,3 +132,11 @@ zuul:
       serviceId: microservice-provider-user
 ```
 ***zuul集成了hystrix，具有断路器功能***
+***zuul具有过滤器功能***
+
+## Spring Cloud Config
+Spring Cloud Server（也可以基于zk或者consul）<br>
+百度的disconf<br>
+阿里的diamond<br>
+携程的apollo<br>
+

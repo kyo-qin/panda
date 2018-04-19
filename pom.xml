@@ -23,6 +23,7 @@
 		<module>panda-gateway-zuul</module>
     <module>panda-sidecar</module>
     <module>panda-customer-thymeleaf</module>
+    <module>panda-config-server</module>
   </modules>
 
 	<parent>
