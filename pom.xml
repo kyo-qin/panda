@@ -24,6 +24,7 @@
     <module>panda-sidecar</module>
     <module>panda-customer-thymeleaf</module>
     <module>panda-config-server</module>
+    <module>panda-config-client</module>
   </modules>
 
 	<parent>

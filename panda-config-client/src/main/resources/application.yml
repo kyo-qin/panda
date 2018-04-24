@@ -1,0 +1,11 @@
+#management:
+#  port: 8762
+server:
+  port: 8081
+
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8080
+  application:
+    name: microservice-config-client
