@@ -8,6 +8,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * Hello world!
  *
  */
+//http://localhost:8080/master/microservice-config-client-dev.properties
 @EnableConfigServer
 @SpringBootApplication
 public class App {

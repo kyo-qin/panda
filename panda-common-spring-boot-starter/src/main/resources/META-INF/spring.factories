@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=org.panda.common.spring.boot.starter.CommonServiceAutoConfigure

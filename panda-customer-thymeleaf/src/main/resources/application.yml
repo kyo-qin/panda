@@ -28,6 +28,12 @@ logging:
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
     org.ota: DEBUG
+    
+panda:
+  common:
+    service:
+      enabled: true
+      version: 0.0.1-SNAPSHOT-QINTAO
 #eureka:
 #  client:
 #    serviceUrl:
