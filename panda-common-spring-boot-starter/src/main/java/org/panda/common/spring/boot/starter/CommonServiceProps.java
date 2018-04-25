@@ -3,6 +3,7 @@ package org.panda.common.spring.boot.starter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
+ * 
  * @Description 通过配置文件application.yml取得值
  * @ClassName CommonServiceProps
  * @Copyright 炫彩互动
