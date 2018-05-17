@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      uri: http://localhost:8080
+      uri: http://user:123@localhost:8080
       profile: dev
       label: master #当后端是git的时候，默认是master
   application:
