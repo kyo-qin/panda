@@ -22,5 +22,8 @@ public class UserClientController {
         return this.restTemplate.getForObject("http://localhost:7900/simple/" + id, NPConfigInfo.class);
     }
     
-    
+    @GetMapping("/service/{name}")
+    public String getService(@PathVariable String name) {
+        return discoveryClient.getApplication(name).getInstances().get(0).getHealthCheckUrl();
+    }
 }
