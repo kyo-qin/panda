@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: microservice-zipkin-server
+server:
+  port: 11008
+management:
+  security:
+    enabled: false
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://user:password123@localhost:8761/eureka
+#  instance:
+#    prefer-ip-address: true

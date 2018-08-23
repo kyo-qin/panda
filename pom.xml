@@ -27,6 +27,7 @@
 		<module>panda-config-client</module>
 		<module>panda-common-spring-boot-starter</module>
     <module>panda-common-guava</module>
+    <module>panda-zipkin-server</module>
   </modules>
 
 	<parent>
