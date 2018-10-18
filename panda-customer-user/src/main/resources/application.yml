@@ -1,6 +1,11 @@
 spring:
   application:
     name: microservice-consumer-user
+  zipkin:
+    base-url: http://localhost:11008
+  sleuth:
+    sampler:
+      percentage: 1.0
 server:
   port: 8010
 eureka:

@@ -28,6 +28,7 @@
 		<module>panda-common-spring-boot-starter</module>
     <module>panda-common-guava</module>
     <module>panda-zipkin-server</module>
+    <module>panda-zipkin-brave</module>
   </modules>
 
 	<parent>

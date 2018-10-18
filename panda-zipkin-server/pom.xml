@@ -16,13 +16,25 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>io.zipkin.java</groupId>
 			<artifactId>zipkin-server</artifactId>
 		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>io.zipkin.java</groupId> -->
+		<!-- <artifactId>zipkin</artifactId> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.cloud</groupId> -->
+		<!-- <artifactId>spring-cloud-starter-sleuth</artifactId> -->
+		<!-- </dependency> -->
 		<!-- Zipkin可视化界面依赖 -->
 		<dependency>
 			<groupId>io.zipkin.java</groupId>
@@ -32,7 +44,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

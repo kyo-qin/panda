@@ -6,9 +6,10 @@ server:
 management:
   security:
     enabled: false
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://user:password123@localhost:8761/eureka
-#  instance:
-#    prefer-ip-address: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}

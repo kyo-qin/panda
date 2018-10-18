@@ -25,7 +25,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<!-- 这个和security有冲突 -->
+		<!-- 这个和security有冲突，其实是jar包坏了，没冲突啦 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -81,6 +81,12 @@
 		<dependency>
 			<groupId>io.dropwizard.metrics</groupId>
 			<artifactId>metrics-core</artifactId>
+		</dependency>
+
+		<!-- zipkin -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
 	</dependencies>
 </project>
