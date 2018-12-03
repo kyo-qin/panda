@@ -29,6 +29,8 @@
     <module>panda-common-guava</module>
     <module>panda-zipkin-server</module>
     <module>panda-zipkin-brave</module>
+    <module>panda-consul-client</module>
+    <module>panda-consul-client2</module>
   </modules>
 
 	<parent>
